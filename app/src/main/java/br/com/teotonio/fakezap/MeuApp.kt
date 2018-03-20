@@ -3,6 +3,7 @@ package br.com.teotonio.fakezap
 import android.app.Application
 import com.facebook.stetho.Stetho
 import com.orhanobut.hawk.Hawk
+import com.orhanobut.hawk.NoEncryption
 
 /**
  * Created by logonrm on 19/03/2018.
@@ -14,6 +15,7 @@ class MeuApp : Application(){
 
         Stetho.initializeWithDefaults(this);
         Hawk.init(this).build()
+        //Hawk.init(this).setEncryption(NoEncryption()).build()
 
     }
 
